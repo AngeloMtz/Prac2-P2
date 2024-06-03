@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Operaciones Básicas</title>
+    <script>
+        function calcular(operador, a, b) {     
+            let resultado; 
+            switch (operador) {    
+                case 'sumar':
+                    resultado = a + ' + ' + b + ' = ' + (a + b); 
+                    break;
+                case 'restar':
+                    resultado = a + ' - ' + b + ' = ' +  (a - b); 
+                    break;
+                case 'multiplicar':
+                    resultado = a + ' * ' + b + ' = ' +  (a * b); 
+                    break;
+                case 'dividir':
+                    resultado = a + ' / ' + b + ' = ' +  (a / b);   
+                    break;
+            }
+            document.getElementById('total').innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Operaciones Básicas con Paso de Parámetros</h1>
+    </header>
+    <section class="operaciones">
+        <div class="calculadora">
+            <h1>Calculadora Básica</h1>
+            <div class="resultado" >
+                <p id="total"></p> 
+            </div>
+            <button type="button" onclick="calcular('sumar', 8, 4)">+</button>          
+            <button type="button" onclick="calcular('restar', 8, 4)">-</button>         
+            <button type="button" onclick="calcular('multiplicar', 8, 4)">*</button>   
+            <button type="button" onclick="calcular('dividir', 8, 4)">/</button>        
+        </div>
+    </section>
+    <footer>
+        <p>Angel Uriel Martinez Hernandez 3D</p>
+    </footer>
+</body>
+</html>
